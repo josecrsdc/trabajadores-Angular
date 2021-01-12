@@ -1,0 +1,26 @@
+<h1 class="text-center">
+  {{ title }}
+</h1>
+<div class="d-flex flex-wrap justify-content-start">
+
+  <app-card-trabajador
+  class="m-3"
+  (likeTrabajador)="sumaVoto($event)"
+  (unLikeTrabajador)="restaVoto($event)"
+  (borraTrabajador)="borrar($event)"
+  [trabajador]= "trabajador" *ngFor="let trabajador of trabajadores">
+  </app-card-trabajador>
+
+</div>
+
+<h3 class="text-center mt-3" *ngIf="topTrabajador.length > 0">
+  {{ titleVotos }}
+</h3>
+
+<div class="masVotado">
+  <app-mas-votado class="mx-auto py-4"
+  [trabajador]="trabajador" *ngFor="let trabajador of topTrabajador">
+  </app-mas-votado>
+</div>
+
+

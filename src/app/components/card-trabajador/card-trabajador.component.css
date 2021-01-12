@@ -1,0 +1,9 @@
+.card {
+  max-width: 220px;
+}
+
+.img-like{
+  padding: 5px;
+  cursor: pointer;
+  max-width: 35px;
+}
